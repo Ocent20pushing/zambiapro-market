@@ -1,0 +1,87 @@
+:root {
+    --primary: #1a5d1a;      /* Dark Green */
+    --secondary: #f39c12;    /* Zambia Orange */
+    --dark: #2c3e50;
+    --light: #ffffff;
+    --bg: #f0f2f5;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--dark);
+}
+
+.container { width: 90%; max-width: 1000px; margin: auto; }
+
+/* Navigation */
+nav { background: white; padding: 15px 0; border-bottom: 3px solid var(--primary); }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 24px; font-weight: bold; color: var(--primary); }
+.logo span { color: var(--secondary); }
+
+/* Hero Section */
+.hero { 
+    background: linear-gradient(rgba(26, 93, 26, 0.9), rgba(26, 93, 26, 0.9)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1000');
+    background-size: cover;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+
+.search-box { margin-top: 30px; }
+#citySearch {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: none;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Professional Cards */
+.pro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.pro-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.pro-card:hover { transform: translateY(-5px); }
+
+.pro-card h3 { margin: 0 0 10px 0; color: var(--primary); }
+
+.badge {
+    background: #e8f5e9;
+    color: var(--primary);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.whatsapp-btn {
+    display: block;
+    background: #25d366;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+footer { text-align: center; padding: 40px; color: #777; }
