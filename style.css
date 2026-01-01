@@ -1,32 +1,36 @@
-/* Add these to your existing style.css or replace all */
 :root {
     --primary: #1a5d1a;
     --secondary: #f39c12;
     --dark: #1e272e;
-    --light: #ffffff;
+    --bg: #f8f9fa;
 }
 
-body { font-family: 'Inter', sans-serif; margin: 0; background: #f8f9fa; }
-.container { width: 92%; max-width: 1100px; margin: auto; }
+body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: #333; }
+.container { width: 92%; max-width: 1000px; margin: auto; }
 
-/* Nav Fix */
+/* Navigation */
 .nav-flex { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
-.nav-links { display: flex; align-items: center; gap: 20px; }
-.support-link { text-decoration: none; color: var(--dark); font-weight: 500; }
+.logo { font-size: 24px; font-weight: bold; color: var(--primary); }
+.logo span { color: var(--secondary); }
+.join-btn { background: var(--secondary); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; }
 
-/* Ads Area */
-.ad-space { text-align: center; margin: 20px auto; }
-.ad-box { background: #eee; border: 2px dashed #ccc; padding: 20px; border-radius: 8px; }
+/* Hero */
+.hero { background: var(--primary); color: white; padding: 60px 0; text-align: center; }
+#citySearch { width: 100%; max-width: 500px; padding: 15px; border-radius: 30px; border: none; margin-top: 20px; font-size: 16px; }
 
-/* Support Section */
-.support-section { background: white; padding: 50px 0; text-align: center; margin-top: 40px; border-top: 1px solid #ddd; }
-.support-btn { background: #25d366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; margin-top: 15px; }
+/* Cards */
+.pro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 40px 0; }
+.pro-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.badge { background: #e8f5e9; color: var(--primary); padding: 5px 10px; border-radius: 5px; font-size: 12px; font-weight: bold; }
+.whatsapp-btn { display: block; background: #25d366; color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; margin-top: 15px; font-weight: bold; }
 
-/* Footer & Social Media */
+/* Sections */
+.share-section { background: #fff; border-top: 1px solid #eee; padding: 30px 0; text-align: center; }
+.share-btn { padding: 10px 20px; color: white; text-decoration: none; border-radius: 5px; margin: 5px; font-weight: bold; display: inline-block; }
+.share-btn.wa { background: #25d366; }
+.share-btn.fb { background: #1877f2; }
+.support-section { padding: 50px 0; text-align: center; background: #f1f1f1; }
+.support-btn { background: var(--dark); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; }
+
 footer { background: var(--dark); color: white; padding: 40px 0; text-align: center; }
-.social-links { font-size: 24px; margin-bottom: 20px; }
-.social-links a { color: white; margin: 0 15px; text-decoration: none; transition: 0.3s; }
-.social-links a:hover { color: var(--secondary); }
-
-/* Pro Grid */
-.pro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 40px 0; }
+.social-links a { color: white; margin: 0 15px; font-size: 20px; }
