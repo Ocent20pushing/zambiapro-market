@@ -3,37 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZambiaPro | Find Trusted Local Services</title>
+    <title>ZambiaPro | Find & List Local Services</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <nav>
         <div class="container nav-flex">
             <div class="logo">Zambia<span>Pro</span></div>
-            <div class="tagline">Local Experts, Fast.</div>
+            <div class="nav-links">
+                <a href="#support" class="support-link">Support</a>
+                <a href="https://wa.me/260970000000?text=Business%20Registration" class="join-btn">Register Business</a>
+            </div>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container">
-            <h1>Need a Repair or Service?</h1>
-            <p>Connect with verified plumbers, electricians, and mechanics across Zambia.</p>
-            <div class="search-box">
-                <input type="text" id="citySearch" placeholder="Type your city (e.g. Lusaka, Kitwe, Livingstone)...">
-            </div>
+            <h1>Zambia's #1 Pro Marketplace</h1>
+            <p>Verified experts for your home and office.</p>
+            <input type="text" id="citySearch" placeholder="Search City or Service (e.g. Lusaka Plumber)...">
         </div>
     </header>
 
-    <section class="main-content">
+    <div class="container ad-space">
+        <p style="font-size: 10px; color: #999;">ADVERTISEMENT</p>
+        <div class="ad-box">Your Google Ad Will Appear Here</div>
+    </div>
+
+    <main class="container">
+        <div id="proContainer" class="pro-grid"></div>
+    </main>
+
+    <section id="support" class="support-section">
         <div class="container">
-            <h2 id="resultsHeading">Available Professionals</h2>
-            <div id="proContainer" class="pro-grid">
-                </div>
+            <h2>Need Help?</h2>
+            <p>Our 24/7 customer support is here for you.</p>
+            <a href="https://wa.me/260970000000?text=I%20need%20Customer%20Support" class="support-btn">
+                <i class="fab fa-whatsapp"></i> Chat with Support
+            </a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 ZambiaPro Marketplace | Built for Zambia</p>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2026 ZambiaPro Marketplace. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script src="app.js"></script>
