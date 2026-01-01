@@ -1,7 +1,8 @@
 const professionals = [
-    { name: "Lusaka Power Ltd", service: "Electrical Contractor", city: "Lusaka", phone: "260970000000", rating: 5, verified: true },
-    { name: "Copperbelt Pipes", service: "Plumbing Agency", city: "Kitwe", phone: "260970000000", rating: 5, verified: true },
-    { name: "Lazarus Phiri", service: "Plumber", city: "Lusaka", phone: "260970000000", rating: 4, verified: false }
+    { name: "Lusaka Power Ltd", service: "Electrician", city: "Lusaka", phone: "260970000000", rating: 5, verified: true },
+    { name: "Copper Pipes ZM", service: "Plumber", city: "Kitwe", phone: "260970000000", rating: 5, verified: true },
+    { name: "Lazarus Phiri", service: "Plumber", city: "Lusaka", phone: "260970000000", rating: 4, verified: false },
+    { name: "Gift Kapiri", service: "Mechanic", city: "Ndola", phone: "260970000000", rating: 5, verified: false }
 ];
 
 function displayPros(filter = "") {
@@ -14,15 +15,14 @@ function displayPros(filter = "") {
     );
 
     filtered.forEach(p => {
-        const verifiedBadge = p.verified ? `<span class="badge" style="background:#3498db;">Verified Business</span>` : '';
+        const vBadge = p.verified ? `<span class="badge" style="background:#3498db; color:white;">Verified Business</span> ` : '';
         container.innerHTML += `
-            <div class="pro-card" style="background:white; padding:20px; border-radius:15px; position:relative;">
-                ${verifiedBadge}
-                <span class="badge">${p.service}</span>
-                <div style="margin-top:10px;">${"⭐".repeat(p.rating)}</div>
-                <h3>${p.name}</h3>
+            <div class="pro-card">
+                ${vBadge} <span class="badge">${p.service}</span>
+                <div style="margin: 10px 0;">${"⭐".repeat(p.rating)}</div>
+                <h3 style="margin: 5px 0;">${p.name}</h3>
                 <p>📍 ${p.city}</p>
-                <a href="https://wa.me/${p.phone}" class="whatsapp-btn">Contact via WhatsApp</a>
+                <a href="https://wa.me/${p.phone}" class="whatsapp-btn">Chat on WhatsApp</a>
             </div>
         `;
     });
