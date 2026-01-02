@@ -3,90 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - ZambiaPro</title>
+    <title>ZambiaPro | Verified Local Services</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Specific styles for the text-heavy privacy page */
-        .policy-content {
-            background: white;
-            padding: 40px;
-            margin-top: 20px;
-            margin-bottom: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            line-height: 1.6;
-            color: #444;
-        }
-        .policy-content h2 { color: var(--primary); margin-top: 20px; }
-        .back-link { 
-            display: inline-block; 
-            margin-top: 20px; 
-            background: var(--secondary); 
-            color: white; 
-            padding: 10px 20px; 
-            text-decoration: none; 
-            border-radius: 5px; 
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
     <nav>
         <div class="container nav-flex">
             <div class="logo">Zambia<span>Pro</span></div>
-            <a href="index.html" class="join-btn">Back to Home</a>
+            <div class="nav-links">
+                <a href="#faq" class="support-link">FAQ</a>
+                <a href="#join-section" class="join-btn">Register Business</a>
+            </div>
         </div>
     </nav>
 
-    <header class="hero" style="padding: 30px 0;">
+    <header class="hero">
         <div class="container">
-            <h1>Privacy Policy</h1>
-            <p>Last Updated: January 2026</p>
+            <h1>Zambia's #1 Service Marketplace</h1>
+            <p>Connect with the best experts in Lusaka, Kitwe, and Ndola.</p>
+            <div class="search-box-container">
+                <select id="categoryFilter" class="search-dropdown">
+                    <option value="">All Categories</option>
+                    <option value="Electrician">Electricians</option>
+                    <option value="Plumber">Plumbers</option>
+                    <option value="Mechanic">Mechanics</option>
+                    <option value="Cosmetics">Beauty & Cosmetics</option>
+                    <option value="IT">IT Support</option>
+                    <option value="Catering">Catering</option>
+                </select>
+                <input type="text" id="citySearch" placeholder="Search City (e.g. Lusaka)...">
+            </div>
         </div>
     </header>
 
     <main class="container">
-        <div class="policy-content">
-            <h2>1. Introduction</h2>
-            <p>Welcome to ZambiaPro Marketplace. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this policy, or our practices with regards to your personal information, please contact us at via WhatsApp at +260 762 702 665.</p>
-
-            <h2>2. Information We Collect</h2>
-            <p>We do not require user accounts to browse our directory. If you choose to list your business, we collect the information you voluntarily provide to us via WhatsApp, such as:</p>
-            <ul>
-                <li>Business Name</li>
-                <li>Phone Number</li>
-                <li>Location</li>
-                <li>Service Description</li>
-            </ul>
-
-            <h2>3. How We Use Your Information</h2>
-            <p>We use the information we collect or receive:</p>
-            <ul>
-                <li>To post your business listing on the ZambiaPro directory.</li>
-                <li>To allow customers to contact you directly via WhatsApp.</li>
-                <li>To improve the user experience on our website.</li>
-            </ul>
-
-            <h2>4. Third-Party Links (WhatsApp)</h2>
-            <p>Our website contains direct links to WhatsApp. Once you use these links to leave our site, you should note that we do not have any control over that other website or application. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites.</p>
-
-            <h2>5. Google AdSense & Cookies</h2>
-            <p>We use Google AdSense to display advertisements. Google uses cookies to serve ads based on your prior visits to our website or other websites. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to our sites and/or other sites on the Internet.</p>
-            <p>You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank">Google Ads Settings</a>.</p>
-
-            <h2>6. Contact Us</h2>
-            <p>If you have questions about this policy, please contact us via WhatsApp: <strong>+260 762 702 665</strong>.</p>
-
-            <a href="index.html" class="back-link">Return to Home Page</a>
-        </div>
+        <div id="proContainer" class="pro-grid"></div>
     </main>
 
-    <footer style="background: #1e272e; color: white; padding: 20px 0; text-align: center;">
+    <section class="safety-section">
         <div class="container">
-            <p>&copy; 2026 ZambiaPro Marketplace.</p>
+            <h2 style="text-align: center; margin-bottom: 30px;">Your Safety Matters</h2>
+            <div class="safety-grid">
+                <div class="safety-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h4>Verify the Pro</h4>
+                    <p>Ask for ID upon arrival. Check if their phone number matches the one on ZambiaPro.</p>
+                </div>
+                <div class="safety-card">
+                    <i class="fas fa-comments"></i>
+                    <h4>Discuss Price First</h4>
+                    <p>Agree on a fee via WhatsApp before the work starts to avoid disputes.</p>
+                </div>
+                <div class="safety-card">
+                    <i class="fas fa-people-arrows"></i>
+                    <h4>Public Places</h4>
+                    <p>For goods delivery or meetings, always choose a busy, public location.</p>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 style="text-align: center;">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>Is ZambiaPro free?</h3>
+                <p>Yes, searching for professionals is completely free for everyone.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I find a plumber in Lusaka?</h3>
+                <p>Select 'Plumber' in the category and type 'Lusaka' in the city search bar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="join-section" class="form-section">
+        <div class="container">
+            <h2>📝 List Your Business</h2>
+            <form id="listingForm" class="business-form">
+                <input type="text" id="bizName" required placeholder="Business Name">
+                <select id="bizLocation" required>
+                    <option value="Lusaka">Lusaka</option>
+                    <option value="Kitwe">Kitwe</option>
+                    <option value="Ndola">Ndola</option>
+                    <option value="Other">Other</option>
+                </select>
+                <select id="bizCategory" required>
+                    <option value="Electrician">Electrician</option>
+                    <option value="Plumber">Plumber</option>
+                    <option value="Mechanic">Mechanic</option>
+                    <option value="Cosmetics">Cosmetics</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="tel" id="bizPhone" required placeholder="WhatsApp Number">
+                <textarea id="bizDesc" rows="3" placeholder="Describe your services"></textarea>
+                <button type="submit" class="submit-btn"><i class="fab fa-whatsapp"></i> Submit to WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <footer style="background: #1e272e; color: white; padding: 40px 0; text-align: center;">
+        <p>&copy; 2026 ZambiaPro. <a href="privacy.html" style="color:#f39c12;">Privacy Policy</a> | Support: +260762702665</p>
     </footer>
 
+    <script src="app.js"></script>
 </body>
 </html>
