@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZambiaPro | Find & List Local Services</title>
+    
+    <meta name="description" content="Find trusted electricians, plumbers, mechanics, and events planning in Lusaka, Kitwe, and Ndola. ZambiaPro is Zambia's #1 local business directory.">
+    <meta name="keywords" content="Zambia business, Lusaka plumbers, Kitwe mechanics, Event planners Zambia, Handyman Lusaka">
+    <title>ZambiaPro | Find Trusted Pros in Lusaka, Kitwe & Ndola</title>
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -12,58 +16,105 @@
         <div class="container nav-flex">
             <div class="logo">Zambia<span>Pro</span></div>
             <div class="nav-links">
-                <a href="#support" class="support-link">Support</a>
-                <a href="https://wa.me/260970000000?text=I%20want%20to%20register%20my%20business" class="join-btn">Register Business</a>
+                <a href="#join-section" class="join-btn">List Your Business</a>
             </div>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container">
-            <h1>Zambia's #1 Pro Marketplace</h1>
-            <p>Verified experts for your home and office.</p>
-            <input type="text" id="citySearch" placeholder="Search City or Service (e.g. Lusaka Plumber)...">
+            <h1>Find Trusted Services in Zambia</h1>
+            <p>From Lusaka to Livingstone—Connecting you with the best.</p>
+            
+            <div class="search-box-container">
+                <select id="categoryFilter" class="search-dropdown">
+                    <option value="">All Categories</option>
+                    <option value="Electrician">Electricians</option>
+                    <option value="Plumber">Plumbers</option>
+                    <option value="Mechanic">Mechanics</option>
+                    <option value="Cosmetics">Cosmetics & Beauty</option>
+                    <option value="Catering">Catering & Food</option>
+                    <option value="Events">Events Planning</option>
+                    <option value="Cleaning">Cleaning Services</option>
+                    <option value="Construction">Construction</option>
+                    <option value="IT">IT & Tech Support</option>
+                    <option value="Transport">Transport & Logistics</option>
+                    <option value="Healthcare">Healthcare & Medical</option>
+                    <option value="Education">Education & Tutoring</option>
+                    <option value="Real Estate">Real Estate</option>
+                    <option value="Legal">Legal Services</option>
+                </select>
+                
+                <input type="text" id="citySearch" placeholder="Search City (e.g. Lusaka, Ndola)...">
+            </div>
         </div>
     </header>
 
     <div class="container ad-space">
+        <p style="font-size: 10px; color: #999;">SPONSORED ADVERTISEMENT</p>
         <div class="ad-box">
-            <p style="font-size: 10px; color: #999;">ADVERTISEMENT</p>
-            </div>
+            Want to see your business here? <a href="#join-section">Contact Us</a>
+        </div>
     </div>
 
     <main class="container">
-        <div id="proContainer" class="pro-grid"></div>
+        <h2 class="section-title">Top Rated Professionals</h2>
+        <div id="proContainer" class="pro-grid">
+            </div>
     </main>
 
-    <section class="share-section">
+    <section id="join-section" class="form-section">
         <div class="container">
-            <h3>Help others find pros! Share ZambiaPro:</h3>
-            <div class="share-buttons">
-                <a href="https://api.whatsapp.com/send?text=Check%20out%20ZambiaPro!%20I%20found%20great%20local%20pros%20here:%20https://ocent20pushing.github.io/zambiapro-market/" target="_blank" class="share-btn wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://ocent20pushing.github.io/zambiapro-market/" target="_blank" class="share-btn fb"><i class="fab fa-facebook"></i> Facebook</a>
-            </div>
+            <h2>📝 List Your Business on ZambiaPro</h2>
+            <p>Fill in the details below. We will receive your application via WhatsApp.</p>
+            
+            <form id="listingForm" class="business-form">
+                <label>Business Name *</label>
+                <input type="text" id="bizName" required placeholder="e.g. Lusaka Fast Repairs">
+
+                <label>Location *</label>
+                <select id="bizLocation" required>
+                    <option value="Lusaka">Lusaka</option>
+                    <option value="Kitwe">Kitwe</option>
+                    <option value="Ndola">Ndola</option>
+                    <option value="Livingstone">Livingstone</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label>Category *</label>
+                <select id="bizCategory" required>
+                    <option value="Electrician">Electrician</option>
+                    <option value="Plumber">Plumber</option>
+                    <option value="Mechanic">Mechanic</option>
+                    <option value="Beauty">Cosmetics/Beauty</option>
+                    <option value="Catering">Catering/Food</option>
+                    <option value="Events">Events Planning</option>
+                    <option value="Construction">Construction</option>
+                    <option value="IT">IT/Tech Support</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label>Phone Number *</label>
+                <input type="tel" id="bizPhone" required placeholder="097...">
+
+                <label>Description of Services</label>
+                <textarea id="bizDesc" rows="3" placeholder="Tell us what you do..."></textarea>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fab fa-whatsapp"></i> Submit & Send Photos
+                </button>
+                <p class="small-text">Note: Clicking submit will open WhatsApp to send your details to +260 762 702 665.</p>
+            </form>
         </div>
     </section>
 
-    <section id="support" class="support-section">
+    <footer style="background: #1e272e; color: white; padding: 40px 0; text-align: center;">
         <div class="container">
-            <h2>Need Help?</h2>
-            <p>Our 24/7 customer support is here for you.</p>
-            <a href="https://wa.me/260970000000?text=I%20need%20Customer%20Support" class="support-btn">
-                <i class="fab fa-whatsapp"></i> Chat with Support
-            </a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+            <h3>Share ZambiaPro</h3>
+            <div class="share-buttons" style="margin-bottom: 20px;">
+                <a href="https://api.whatsapp.com/send?text=Find%20local%20pros%20in%20Zambia!%20Check%20out:%20https://ocent20pushing.github.io/zambiapro-market/" class="share-btn wa"><i class="fab fa-whatsapp"></i> Share on WhatsApp</a>
             </div>
-            <p>&copy; 2026 ZambiaPro Marketplace. <a href="privacy.html" style="color:white;">Privacy Policy</a></p>
+            <p>&copy; 2026 ZambiaPro. <a href="privacy.html" style="color:#f39c12;">Privacy</a> | Contact: +260 762 702 665</p>
         </div>
     </footer>
 
