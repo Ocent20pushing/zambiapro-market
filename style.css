@@ -1,37 +1,50 @@
-:root {
-    --primary: #1a5d1a;
-    --secondary: #f39c12;
-    --dark: #1e272e;
-    --bg: #f8f9fa;
+.contact-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
 }
 
-body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: #333; }
-.container { width: 92%; max-width: 1000px; margin: auto; }
+.whatsapp-btn {
+    flex: 1;
+    background: #25d366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
 
-/* Nav & Hero */
-.nav-flex { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
-.logo { font-size: 24px; font-weight: bold; color: var(--primary); }
-.logo span { color: var(--secondary); }
-.join-btn { background: var(--secondary); color: white; padding: 8px 18px; border-radius: 20px; text-decoration: none; font-weight: bold; }
-.hero { background: var(--primary); color: white; padding: 50px 0; text-align: center; }
-.search-box-container { margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.call-btn {
+    flex: 1;
+    background: #3498db;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
 
-/* Cards & Grid */
-.pro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 40px 0; }
-.pro-card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-left: 5px solid var(--secondary); }
-.whatsapp-btn { display: block; background: #25d366; color: white; text-align: center; padding: 10px; border-radius: 5px; text-decoration: none; margin-top: 10px; font-weight: bold; }
+.verified-badge {
+    color: #3498db;
+    font-size: 12px;
+    font-weight: bold;
+}
 
-/* Safety Section */
-.safety-section { background: #fff; padding: 50px 0; border-top: 1px solid #eee; }
-.safety-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; }
-.safety-card i { font-size: 40px; color: var(--secondary); margin-bottom: 15px; }
-.safety-card h4 { color: var(--primary); margin: 10px 0; }
+.category-tag {
+    background: #e8f5e9;
+    color: var(--primary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+}
 
-/* FAQ Section */
-.faq-section { padding: 40px 0; background: #f1f1f1; }
-.faq-item { background: white; padding: 15px; margin-bottom: 10px; border-radius: 5px; }
-
-/* Form Section */
-.form-section { padding: 50px 0; background: white; border-top: 5px solid var(--secondary); }
-.business-form { max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 12px; }
-.submit-btn { background: var(--primary); color: white; padding: 15px; border: none; border-radius: 5px; font-size: 18px; cursor: pointer; }
+.description {
+    font-size: 13px;
+    color: #666;
+    margin: 8px 0;
+}
