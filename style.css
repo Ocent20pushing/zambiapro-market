@@ -14,25 +14,80 @@ body {
 }
 
 .container { width: 92%; max-width: 1000px; margin: auto; }
+/* Navigation Button - BIG & BOLD */
+.nav-join-btn {
+    background: var(--zam-orange);
+    color: var(--zam-black);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border: 2px solid white;
+    transition: 0.3s;
+}
 
-/* Navigation with Dark Green */
-nav { 
-    background: var(--zam-green); 
-    padding: 15px 0; 
-    border-bottom: 4px solid var(--zam-orange);
+.nav-join-btn:hover {
+    background: white;
+    transform: scale(1.05);
 }
-.nav-flex { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 24px; font-weight: bold; color: var(--white); }
-.logo span { color: var(--zam-orange); }
-.join-btn { 
-    background: var(--zam-orange); 
-    color: var(--zam-black); 
-    padding: 8px 18px; 
-    border-radius: 20px; 
-    text-decoration: none; 
-    font-weight: bold; 
-    font-size: 14px;
+
+/* The New Sign-Up Box Styling */
+.signup-promo {
+    margin: -30px auto 30px; /* Overlaps the hero slightly */
+    position: relative;
+    z-index: 10;
 }
+
+.promo-card {
+    background: var(--zam-black);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 5px solid var(--zam-orange);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.promo-text h2 {
+    margin: 0;
+    color: var(--zam-orange);
+    font-size: 24px;
+}
+
+.promo-text p {
+    margin: 5px 0 0;
+    opacity: 0.9;
+}
+
+.big-signup-btn {
+    background: var(--zam-green);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    transition: 0.3s;
+    border: 2px solid var(--zam-orange);
+}
+
+.big-signup-btn:hover {
+    background: var(--zam-orange);
+    color: var(--zam-black);
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+    .promo-card { text-align: center; justify-content: center; gap: 20px; }
+    .nav-join-btn { font-size: 14px; padding: 10px 15px; }
+}
+
 
 /* Hero Section */
 .hero { 
