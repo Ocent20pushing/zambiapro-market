@@ -1,50 +1,89 @@
-.contact-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
+:root {
+    --zam-green: #1a5d1a;      /* The bold Zambian flag green */
+    --zam-orange: #f39c12;     /* The copper/orange accent */
+    --zam-black: #1e272e;      /* Professional dark grey/black */
+    --light-green: #eef5ee;    /* Soft green for page background */
+    --white: #ffffff;
 }
 
-.whatsapp-btn {
-    flex: 1;
-    background: #25d366;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+    background-color: var(--light-green); /* Subtle green background */
+    color: var(--zam-black);
+}
+
+.container { width: 92%; max-width: 1000px; margin: auto; }
+
+/* Navigation with Dark Green */
+nav { 
+    background: var(--zam-green); 
+    padding: 15px 0; 
+    border-bottom: 4px solid var(--zam-orange);
+}
+.nav-flex { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 24px; font-weight: bold; color: var(--white); }
+.logo span { color: var(--zam-orange); }
+.join-btn { 
+    background: var(--zam-orange); 
+    color: var(--zam-black); 
+    padding: 8px 18px; 
+    border-radius: 20px; 
+    text-decoration: none; 
+    font-weight: bold; 
     font-size: 14px;
 }
 
-.call-btn {
-    flex: 1;
-    background: #3498db;
-    color: white;
-    text-align: center;
-    padding: 10px;
+/* Hero Section */
+.hero { 
+    background: linear-gradient(rgba(26, 93, 26, 0.85), rgba(26, 93, 26, 0.95)), 
+                url('https://www.shutterstock.com/shutterstock/photos/2156475647/display_1500/stock-photo-victoria-falls-waterfall-in-zambia-and-zimbabwe-africa-2156475647.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    padding: 60px 0; 
+    text-align: center; 
+}
+.hero h1 { font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+
+/* Professional Cards */
+.pro-card { 
+    background: var(--white); 
+    padding: 25px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+    border-top: 5px solid var(--zam-green); /* Green top border */
+    transition: transform 0.3s ease;
+}
+.pro-card:hover { transform: translateY(-5px); }
+
+/* Buttons */
+.contact-actions { display: flex; gap: 10px; margin-top: 20px; }
+
+.whatsapp-btn { 
+    flex: 1; background: #25d366; color: white; text-align: center; 
+    padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; 
+}
+.call-btn { 
+    flex: 1; background: var(--zam-green); color: white; text-align: center; 
+    padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; 
+}
+
+/* FAQ & Safety Sections */
+.safety-section { background: var(--white); padding: 50px 0; }
+.faq-section { background: var(--light-green); padding: 50px 0; }
+.faq-item { 
+    background: var(--white); 
+    padding: 20px; 
+    margin-bottom: 15px; 
+    border-left: 5px solid var(--zam-orange);
     border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
 }
 
-.verified-badge {
-    color: #3498db;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.category-tag {
-    background: #e8f5e9;
-    color: var(--primary);
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: bold;
-}
-
-.description {
-    font-size: 13px;
-    color: #666;
-    margin: 8px 0;
+footer { 
+    background: var(--zam-black); 
+    color: var(--white); 
+    padding: 40px 0; 
+    text-align: center; 
+    border-top: 5px solid var(--zam-green);
 }
