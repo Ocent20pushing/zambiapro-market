@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZambiaPro | AI-Powered Marketplace</title>
+    <title>ZambiaPro | AI Service Directory</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -13,9 +13,7 @@
     <nav class="glass-nav">
         <div class="container nav-flex">
             <div class="logo">Zambia<span>Pro</span> <small>AI</small></div>
-            <div class="nav-links">
-                <a href="#join-section" class="modern-btn">REGISTER BUSINESS</a>
-            </div>
+            <a href="#join-section" class="modern-btn">REGISTER BUSINESS</a>
         </div>
     </nav>
 
@@ -23,8 +21,8 @@
         <div class="hero-glow"></div>
         <div class="container">
             <div class="badge-ai">ZAMBIA'S SMART DIRECTORY 2026</div>
-            <h1>Find Experts <span class="text-gradient">Instantly.</span></h1>
-            <p>The smartest way to find electricians, plumbers, and mechanics in Zambia.</p>
+            <h1>The Future of <span class="text-gradient">Local Services.</span></h1>
+            <p>Connecting you with verified professionals across the nation instantly.</p>
             
             <div class="glass-search">
                 <select id="categoryFilter">
@@ -33,13 +31,13 @@
                     <option value="Plumber">Plumber</option>
                     <option value="Mechanic">Mechanic</option>
                 </select>
-                <input type="text" id="citySearch" placeholder="Search City (e.g. Lusaka)...">
+                <input type="text" id="citySearch" placeholder="Enter City (Lusaka, Kitwe...)">
             </div>
 
             <div class="stats-bar">
                 <div class="stat-item"><strong>50+</strong><span>Verified Pros</span></div>
-                <div class="stat-item"><strong>1.2k</strong><span>Searches</span></div>
-                <div class="stat-item"><strong>FREE</strong><span>Access</span></div>
+                <div class="stat-item"><strong>1.2k</strong><span>Monthly Views</span></div>
+                <div class="stat-item"><strong>100%</strong><span>Free Access</span></div>
             </div>
         </div>
     </header>
@@ -49,60 +47,29 @@
         <div id="proContainer" class="pro-grid"></div>
     </main>
 
-    <section class="news-section">
-        <div class="container">
-            <h2 class="section-title">Latest Insights</h2>
-            <div class="news-grid">
-                <article class="news-card">
-                    <div class="news-tag">GUIDE</div>
-                    <h3>Hiring Safe in Lusaka</h3>
-                    <p>How to verify an electrician's credentials before work starts.</p>
-                </article>
-                <article class="news-card">
-                    <div class="news-tag">TIPS</div>
-                    <h3>Car Maintenance 101</h3>
-                    <p>Why finding a mechanic in Kitwe is easier with AI.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
     <section id="join-section" class="dark-section">
         <div class="container">
             <div class="ai-form-card">
                 <div class="form-content">
-                    <div class="counter-badge">JOIN 50+ PROS</div>
-                    <h2>Launch Your Business</h2>
-                    <p>Get listed on Zambia's most advanced digital directory.</p>
+                    <h2>Launch Your Listing</h2>
+                    <p>Join the AI-powered network today.</p>
                     <form id="listingForm" class="modern-form">
                         <input type="text" id="bizName" placeholder="Business Name" required>
                         <div class="split">
-                            <select id="bizLocation" required>
-                                <option value="Lusaka">Lusaka</option>
-                                <option value="Kitwe">Kitwe</option>
-                                <option value="Ndola">Ndola</option>
-                            </select>
-                            <select id="bizCategory" required>
-                                <option value="Electrician">Electrician</option>
-                                <option value="Plumber">Plumber</option>
-                                <option value="Mechanic">Mechanic</option>
-                            </select>
+                            <select id="bizLocation"><option>Lusaka</option><option>Kitwe</option></select>
+                            <select id="bizCategory"><option>Electrician</option><option>Plumber</option></select>
                         </div>
                         <input type="tel" id="bizPhone" placeholder="WhatsApp Number" required>
-                        <button type="submit" class="glow-btn">DEPLOY LISTING <i class="fas fa-rocket"></i></button>
+                        <button type="submit" class="glow-btn">DEPLOY LISTING</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 ZambiaPro | Support: +260762702665</p>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/260762702665" class="ai-chat"><i class="fas fa-robot"></i></a>
+    <a href="https://wa.me/260762702665" class="ai-chat">
+        <i class="fas fa-robot"></i>
+    </a>
 
     <script src="app.js"></script>
 </body>
