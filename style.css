@@ -1,144 +1,48 @@
 :root {
-    --zam-green: #1a5d1a;      /* The bold Zambian flag green */
-    --zam-orange: #f39c12;     /* The copper/orange accent */
-    --zam-black: #1e272e;      /* Professional dark grey/black */
-    --light-green: #eef5ee;    /* Soft green for page background */
-    --white: #ffffff;
+    --ai-green: #00ff88;
+    --zam-green: #1a5d1a;
+    --zam-orange: #ff9f1c;
+    --dark-bg: #050a05;
+    --glass: rgba(255, 255, 255, 0.05);
 }
 
-body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    margin: 0; 
-    background-color: var(--light-green); /* Subtle green background */
-    color: var(--zam-black);
-}
+* { box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: var(--dark-bg); color: #fff; margin: 0; scroll-behavior: smooth; }
+.container { width: 90%; max-width: 1100px; margin: auto; }
 
-.container { width: 92%; max-width: 1000px; margin: auto; }
-/* Navigation Button - BIG & BOLD */
-.nav-join-btn {
-    background: var(--zam-orange);
-    color: var(--zam-black);
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    border: 2px solid white;
-    transition: 0.3s;
+/* AI Nav */
+.glass-nav { 
+    position: sticky; top: 0; z-index: 1000; 
+    background: rgba(5, 10, 5, 0.8); backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--glass); padding: 15px 0;
 }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 22px; font-weight: 800; color: #fff; }
+.logo span { color: var(--ai-green); }
+.modern-btn { background: var(--ai-green); color: #000; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; }
 
-.nav-join-btn:hover {
-    background: white;
-    transform: scale(1.05);
-}
+/* AI Hero */
+.ai-hero { padding: 100px 0; text-align: center; position: relative; }
+.hero-glow { position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 400px; height: 400px; background: var(--ai-green); filter: blur(150px); opacity: 0.15; }
+.badge-ai { background: var(--glass); border: 1px solid var(--ai-green); padding: 5px 15px; border-radius: 50px; display: inline-block; font-size: 12px; color: var(--ai-green); margin-bottom: 20px; }
+.text-gradient { background: linear-gradient(45deg, var(--ai-green), var(--zam-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-/* The New Sign-Up Box Styling */
-.signup-promo {
-    margin: -30px auto 30px; /* Overlaps the hero slightly */
-    position: relative;
-    z-index: 10;
-}
+/* Glass Search */
+.glass-search { background: var(--glass); border: 1px solid rgba(255,255,255,0.1); padding: 10px; border-radius: 50px; max-width: 600px; margin: 40px auto; display: flex; gap: 10px; }
+.glass-search input, .glass-search select { background: transparent; border: none; color: white; padding: 10px; flex: 1; }
+.glass-search input:focus { outline: none; }
 
-.promo-card {
-    background: var(--zam-black);
-    color: white;
-    padding: 30px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    border-bottom: 5px solid var(--zam-orange);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
+/* Pro Grid & Cards */
+.pro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 40px 0; }
+.pro-card { background: var(--glass); border: 1px solid rgba(255,255,255,0.1); padding: 25px; border-radius: 20px; transition: 0.3s; }
+.pro-card:hover { border-color: var(--ai-green); transform: translateY(-5px); }
+.whatsapp-btn { display: block; background: #25d366; color: white; text-align: center; padding: 12px; border-radius: 10px; text-decoration: none; margin-top: 15px; font-weight: bold; }
 
-.promo-text h2 {
-    margin: 0;
-    color: var(--zam-orange);
-    font-size: 24px;
-}
+/* AI Form Card */
+.ai-form-card { background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%); border: 1px solid var(--glass); padding: 40px; border-radius: 30px; max-width: 700px; margin: 50px auto; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+input, select, textarea { width: 100%; background: rgba(0,0,0,0.3); border: 1px solid var(--glass); padding: 15px; border-radius: 10px; color: white; margin-bottom: 15px; }
+.glow-btn { width: 100%; background: var(--ai-green); color: #000; padding: 18px; border: none; border-radius: 12px; font-weight: 800; cursor: pointer; box-shadow: 0 0 20px rgba(0,255,136,0.3); }
 
-.promo-text p {
-    margin: 5px 0 0;
-    opacity: 0.9;
-}
-
-.big-signup-btn {
-    background: var(--zam-green);
-    color: white;
-    padding: 15px 30px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    display: inline-block;
-    transition: 0.3s;
-    border: 2px solid var(--zam-orange);
-}
-
-.big-signup-btn:hover {
-    background: var(--zam-orange);
-    color: var(--zam-black);
-}
-
-/* Mobile Fix */
-@media (max-width: 768px) {
-    .promo-card { text-align: center; justify-content: center; gap: 20px; }
-    .nav-join-btn { font-size: 14px; padding: 10px 15px; }
-}
-
-
-/* Hero Section */
-.hero { 
-    background: linear-gradient(rgba(26, 93, 26, 0.85), rgba(26, 93, 26, 0.95)), 
-                url('https://www.shutterstock.com/shutterstock/photos/2156475647/display_1500/stock-photo-victoria-falls-waterfall-in-zambia-and-zimbabwe-africa-2156475647.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white; 
-    padding: 60px 0; 
-    text-align: center; 
-}
-.hero h1 { font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-
-/* Professional Cards */
-.pro-card { 
-    background: var(--white); 
-    padding: 25px; 
-    border-radius: 12px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
-    border-top: 5px solid var(--zam-green); /* Green top border */
-    transition: transform 0.3s ease;
-}
-.pro-card:hover { transform: translateY(-5px); }
-
-/* Buttons */
-.contact-actions { display: flex; gap: 10px; margin-top: 20px; }
-
-.whatsapp-btn { 
-    flex: 1; background: #25d366; color: white; text-align: center; 
-    padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; 
-}
-.call-btn { 
-    flex: 1; background: var(--zam-green); color: white; text-align: center; 
-    padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; 
-}
-
-/* FAQ & Safety Sections */
-.safety-section { background: var(--white); padding: 50px 0; }
-.faq-section { background: var(--light-green); padding: 50px 0; }
-.faq-item { 
-    background: var(--white); 
-    padding: 20px; 
-    margin-bottom: 15px; 
-    border-left: 5px solid var(--zam-orange);
-    border-radius: 5px;
-}
-
-footer { 
-    background: var(--zam-black); 
-    color: var(--white); 
-    padding: 40px 0; 
-    text-align: center; 
-    border-top: 5px solid var(--zam-green);
-}
+/* Chat Bubble */
+.ai-chat { position: fixed; bottom: 30px; right: 30px; background: var(--ai-green); color: #000; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 10px 30px rgba(0,255,136,0.4); text-decoration: none; z-index: 1000; }
