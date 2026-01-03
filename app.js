@@ -1,31 +1,6 @@
 const professionals = [
-    { 
-        name: "Emmanuel Mukuma", 
-        category: "Electrician", 
-        city: "Lusaka", 
-        phone: "260977800272", 
-        rating: 5, 
-        verified: true,
-        desc: "Professional domestic and industrial electrical installations."
-    },
-    { 
-        name: "Lazarus Phiri", 
-        category: "Plumber", 
-        city: "Lusaka", 
-        phone: "260970000000", 
-        rating: 4, 
-        verified: false,
-        desc: "Expert in pipe fixing and borehole pump repairs."
-    },
-    { 
-        name: "Copperbelt Plumbing", 
-        category: "Plumber", 
-        city: "Kitwe", 
-        phone: "260970000000", 
-        rating: 5, 
-        verified: true,
-        desc: "Certified plumbing services for residential homes."
-    }
+    { name: "Emmanuel Mukuma", category: "Electrician", city: "Lusaka", phone: "260977800272", rating: 5, verified: true },
+    { name: "Lazarus Phiri", category: "Plumber", city: "Lusaka", phone: "260970000000", rating: 4, verified: false }
 ];
 
 function displayPros() {
@@ -34,31 +9,15 @@ function displayPros() {
     const cat = document.getElementById('categoryFilter').value.toLowerCase();
     container.innerHTML = "";
     
-    professionals.filter(p => 
-        p.city.toLowerCase().includes(city) && 
-        (cat === "" || p.category.toLowerCase() === cat)
-    ).forEach(p => {
-        const vBadge = p.verified ? `<span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>` : '';
-        
+    professionals.filter(p => p.city.toLowerCase().includes(city) && (cat === "" || p.category.toLowerCase() === cat))
+    .forEach(p => {
+        const badge = p.verified ? `<span style="color:var(--ai-green); font-size:10px;">✔ VERIFIED</span>` : '';
         container.innerHTML += `
             <div class="pro-card">
-                <div style="display:flex; justify-content:space-between; align-items:center;">
-                    <span class="category-tag">${p.category}</span>
-                    ${vBadge}
-                </div>
+                <div style="display:flex; justify-content:space-between;">${badge} <span style="opacity:0.6; font-size:11px;">${p.category}</span></div>
                 <h3>${p.name}</h3>
-                <div class="stars">${"⭐".repeat(p.rating)}</div>
-                <p class="description">${p.desc}</p>
-                <p>📍 <strong>${p.city}</strong></p>
-                
-                <div class="contact-actions">
-                    <a href="https://wa.me/${p.phone}?text=Hello%20${p.name},%20I%20found%20you%20on%20ZambiaPro" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
-                    <a href="tel:+${p.phone}" class="call-btn">
-                        <i class="fas fa-phone-alt"></i> Call Now
-                    </a>
-                </div>
+                <p>📍 ${p.city}</p>
+                <a href="https://wa.me/${p.phone}" class="whatsapp-btn">Open WhatsApp</a>
             </div>
         `;
     });
@@ -67,14 +26,10 @@ function displayPros() {
 document.getElementById('citySearch').addEventListener('input', displayPros);
 document.getElementById('categoryFilter').addEventListener('change', displayPros);
 
-// Form submission logic
 document.getElementById('listingForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const name = document.getElementById('bizName').value;
-    const location = document.getElementById('bizLocation').value;
-    const category = document.getElementById('bizCategory').value;
-    const msg = `New Business Registration:%0A- Name: ${name}%0A- Location: ${location}%0A- Category: ${category}`;
-    window.open(`https://wa.me/260762702665?text=${msg}`);
+    window.open(`https://wa.me/260762702665?text=AI-Launch:%20${name}`);
 });
 
 displayPros();
