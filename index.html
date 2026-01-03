@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZambiaPro | AI-Powered Service Marketplace</title>
+    <title>ZambiaPro | Next-Gen Service Marketplace</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="glass-nav">
         <div class="container nav-flex">
-            <div class="logo">Zambia<span>Pro</span> <small>v2.0</small></div>
+            <div class="logo">Zambia<span>Pro</span> <small>AI</small></div>
             <div class="nav-links">
                 <a href="#join-section" class="modern-btn">REGISTER BUSINESS</a>
             </div>
@@ -22,9 +22,9 @@
     <header class="ai-hero">
         <div class="hero-glow"></div>
         <div class="container">
-            <div class="badge-ai">2026 NEXT-GEN DIRECTORY</div>
-            <h1>Find Your Pro <span class="text-gradient">Faster.</span></h1>
-            <p>The smartest way to find electricians, plumbers, and more in Zambia.</p>
+            <div class="badge-ai">ZAMBIA'S SMART DIRECTORY 2026</div>
+            <h1>The Future of <span class="text-gradient">Local Services.</span></h1>
+            <p>Connecting you with verified professionals across the nation instantly.</p>
             
             <div class="glass-search">
                 <select id="categoryFilter">
@@ -32,49 +32,40 @@
                     <option value="Electrician">Electricians</option>
                     <option value="Plumber">Plumbers</option>
                     <option value="Mechanic">Mechanics</option>
-                    <option value="Cosmetics">Beauty & Cosmetics</option>
+                    <option value="Cosmetics">Cosmetics & Beauty</option>
                 </select>
-                <input type="text" id="citySearch" placeholder="Search City (e.g. Lusaka)...">
+                <input type="text" id="citySearch" placeholder="Enter City (Lusaka, Kitwe...)">
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat-item"><strong>50+</strong><span>Verified Pros</span></div>
+                <div class="stat-item"><strong>1.2k</strong><span>Monthly Views</span></div>
+                <div class="stat-item"><strong>100%</strong><span>Free Access</span></div>
             </div>
         </div>
     </header>
 
     <main class="container">
-        <h2 class="section-title">Verified Professionals</h2>
-        <div id="proContainer" class="pro-grid">
-            </div>
+        <h2 class="section-title"><i class="fas fa-bolt" style="color:var(--ai-green)"></i> Top Rated Experts</h2>
+        <div id="proContainer" class="pro-grid"></div>
     </main>
 
-    <section class="safety-section">
+    <section class="news-section">
         <div class="container">
-            <h2 class="text-gradient">Your Safety Matters</h2>
-            <div class="safety-grid">
-                <div class="safety-card">
-                    <i class="fas fa-user-shield"></i>
-                    <h4>Verify ID</h4>
-                    <p>Always ask for identification before allowing a pro into your home.</p>
-                </div>
-                <div class="safety-card">
-                    <i class="fas fa-comments"></i>
-                    <h4>Price Check</h4>
-                    <p>Discuss and agree on service fees via WhatsApp before work starts.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="faq-section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>Is it free?</h3>
-                    <p>Yes, ZambiaPro is free for all customers looking for services.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How do I join?</h3>
-                    <p>Scroll down to the registration form and launch your listing.</p>
-                </div>
+            <h2 class="section-title">Latest Zambian Business News</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-tag">TIPS</div>
+                    <h3>Top 5 Electricians in Lusaka</h3>
+                    <p>Discover the highest-rated electrical experts for your home projects this year...</p>
+                    <a href="#">Read More →</a>
+                </article>
+                <article class="news-card">
+                    <div class="news-tag">SAFETY</div>
+                    <h3>Hiring Safely in 2026</h3>
+                    <p>Essential tips for verifying handymen before they enter your premises...</p>
+                    <a href="#">Read More →</a>
+                </article>
             </div>
         </div>
     </section>
@@ -83,9 +74,8 @@
         <div class="container">
             <div class="ai-form-card">
                 <div class="form-content">
-                    <div class="counter-badge">JOIN 50+ PROS</div>
-                    <h2>Register Your Business</h2>
-                    <p>Deploy your business listing to our smart cloud directory.</p>
+                    <h2>Launch Your Business Listing</h2>
+                    <p>Let the AI show your services to thousands of customers.</p>
                     <form id="listingForm" class="modern-form">
                         <input type="text" id="bizName" placeholder="Business Name" required>
                         <div class="split">
@@ -100,9 +90,9 @@
                                 <option value="Mechanic">Mechanic</option>
                             </select>
                         </div>
-                        <input type="tel" id="bizPhone" placeholder="WhatsApp Number (097...)" required>
-                        <textarea id="bizDesc" placeholder="Describe your experience..."></textarea>
-                        <button type="submit" class="glow-btn">LAUNCH LISTING</button>
+                        <input type="tel" id="bizPhone" placeholder="WhatsApp Number" required>
+                        <textarea id="bizDesc" placeholder="Describe your experience and services..."></textarea>
+                        <button type="submit" class="glow-btn">DEPLOY LISTING <i class="fas fa-rocket"></i></button>
                     </form>
                 </div>
             </div>
@@ -111,13 +101,12 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 ZambiaPro | <a href="privacy.html">Privacy Policy</a> | Support: +260762702665</p>
+            <p>&copy; 2026 ZambiaPro | <a href="privacy.html" style="color:var(--ai-green)">Privacy Policy</a></p>
+            <p style="font-size:12px; opacity:0.5; margin-top:10px;">Support: +260762702665</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/260762702665?text=I%20need%20help%20with%20ZambiaPro" class="ai-chat">
-        <i class="fas fa-robot"></i>
-    </a>
+    <a href="https://wa.me/260762702665" class="ai-chat"><i class="fas fa-robot"></i></a>
 
     <script src="app.js"></script>
 </body>
